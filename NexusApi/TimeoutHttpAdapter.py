@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Module containing the timeout http adapter for this package."""
 from requests.adapters import HTTPAdapter
 

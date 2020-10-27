@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Module containing the base Api class."""
 from urllib3.util.retry import Retry
 from requests_toolbelt import sessions
