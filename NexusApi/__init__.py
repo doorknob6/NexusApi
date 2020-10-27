@@ -1,2 +1,2 @@
-from Api.NexusHub import NexusApi, Price
-from Api.TimeoutHttpAdapter import TimeoutHttpAdapter
+from NexusApi.NexusHub import NexusApi, Price
+from NexusApi.TimeoutHttpAdapter import TimeoutHttpAdapter
