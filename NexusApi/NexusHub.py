@@ -90,55 +90,109 @@ class Price():
         return f"{self.g}g {self.s}s {self.c}c"
 
     def __add__(self, other):
-        return self.price + other
+        if isinstance(other, Price):
+            return Price(self.price + other.price)
+        else:
+            return self.price + other
 
     def __radd__(self, other):
-        return other + self.price
+        if isinstance(other, Price):
+            return Price(other.price + self.price)
+        else:
+            return other + self.price
 
     def __sub__(self, other):
-        return self.price - other
+        if isinstance(other, Price):
+            return Price(self.price - other.price)
+        else:
+            return self.price - other
 
     def __rsub__(self, other):
-        return other - self.price
+        if isinstance(other, Price):
+            return Price(other.price - self.price)
+        else:
+            return other - self.price
 
     def __mul__(self, other):
-        return self.price * other
+        if isinstance(other, Price):
+            return Price(self.price * other.price)
+        else:
+            return self.price * other
 
     def __rmul__(self, other):
-        return self.price * other
+        if isinstance(other, Price):
+            return Price(other.price * self.price)
+        else:
+            return other * self.price
 
     def __truediv__(self, other):
-        return self.price / other
+        if isinstance(other, Price):
+            return Price(self.price / other.price)
+        else:
+            return self.price / other
 
     def __rtruediv__(self, other):
-        return other / self.price
+        if isinstance(other, Price):
+            return Price(other.price / self.price)
+        else:
+            return other / self.price
 
     def __floordiv__(self, other):
-        return self.price // other
+        if isinstance(other, Price):
+            return Price(self.price // other.price)
+        else:
+            return self.price // other
 
-    def __rfloordiv(self, other):
-        return other // self.price
+    def __rfloordiv__(self, other):
+        if isinstance(other, Price):
+            return Price(other.price // self.price)
+        else:
+            return other // self.price
 
     def __mod__(self, other):
-        return self.price % other
+        if isinstance(other, Price):
+            return Price(self.price % other.price)
+        else:
+            return self.price % other
 
     def __rmod__(self, other):
-        return other % self.price
+        if isinstance(other, Price):
+            return Price(other.price % self.price)
+        else:
+            return other % self.price
 
     def __lt__(self, other):
-        return self.price < other
+        if isinstance(other, Price):
+            return self.price < other.price
+        else:
+            return self.price < other
 
     def __le__(self, other):
-        return self.price <= other
+        if isinstance(other, Price):
+            return self.price <= other.price
+        else:
+            return self.price <= other
 
     def __eq__(self, other):
-        return self.price == other
+        if isinstance(other, Price):
+            return self.price == other.price
+        else:
+            return self.price == other
 
     def __ne__(self, other):
-        return self.price != other
+        if isinstance(other, Price):
+            return self.price != other.price
+        else:
+            return self.price != other
 
     def __gt__(self, other):
-        return self.price > other
+        if isinstance(other, Price):
+            return self.price > other.price
+        else:
+            return self.price > other
 
     def __ge__(self, other):
-        return self.price >= other
+        if isinstance(other, Price):
+            return self.price >= other.price
+        else:
+            return self.price >= other

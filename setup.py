@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'NexusApi',
   packages = ['NexusApi'],
-  version = '0.1',
+  version = '0.2',
   license='MIT',
   description = 'Python tools to communicate with the Nexushub website API.',
   author = 'doorknob6',
